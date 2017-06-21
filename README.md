@@ -4,7 +4,7 @@
 </p>
 
 <h3 align="center">
-  React Native Elements
+  React Native Komect UIKit
 </h3>
 
 <p align="center">
