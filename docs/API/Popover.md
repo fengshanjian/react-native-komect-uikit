@@ -57,4 +57,4 @@ const customView = (
 
 
 ## Screenshots
-![](https://github.com/rilyu/teaset/blob/master/screenshots/07-Popover.png?raw=true)
+![](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/example/popover.png?raw=true)
