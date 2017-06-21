@@ -3,7 +3,7 @@
  * @Date:   2017-06-20T09:43:15+08:00
  * @Filename: index.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T16:55:44+08:00
+ * @Last modified time: 2017-06-21T11:48:23+08:00
  */
 
 
@@ -57,6 +57,10 @@ import ListRow from './teaset/ListRow/ListRow';
 
 import * as Progress from './Progress';
 
+import ParallaxView from './ParallaxView/ParallaxView';
+
+import * as Loader from './Loader';
+
 const Elements = {
   Theme,
   ActionPopover,
@@ -73,6 +77,8 @@ const Elements = {
   ListRow,
 
   Progress,
+  ParallaxView,
+  Loader,
 
   Badge,
   Button,

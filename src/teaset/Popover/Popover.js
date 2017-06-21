@@ -3,7 +3,7 @@
  * @Date:   2017-06-19T17:49:44+08:00
  * @Filename: Popover.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T14:24:40+08:00
+ * @Last modified time: 2017-06-21T17:30:36+08:00
  */
 
 
@@ -13,9 +13,10 @@
 'use strict';
 
 import React, {Component, PropTypes} from "react";
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Animated} from 'react-native';
 
 import Theme from '../themes/Theme';
+import Overlay from '../Overlay/Overlay'
 
 export default class Popover extends Component {
 
@@ -205,5 +206,49 @@ export default class Popover extends Component {
       </View>
     );
   }
+  popoverView;
+  /**
+   *
+   * @param  {[type]} view       view的ref
+   * @param  {[type]} black      背景色
+   * @param  {[type]} direction  方向 可选值(down, right, left, up)
+   * @param  {[type]} align      对齐 可选值(center, start, end)
+   * @param  {[type]} customView popview内部显示的view
+   * @return {[type]}            无返回
+   */
+  static showPopover(view, black, direction, align, customView){
+     let blackStyle = {
+       backgroundColor: 'rgba(0, 0, 0, 0.8)',
+       paddingTop: 8,
+       paddingBottom: 8,
+       paddingLeft: 12,
+       paddingRight: 12,
+     };
+     let whiteStyle = {
+       ...blackStyle,
+       backgroundColor: '#fff',
+     };
+     let shadowStyle = {
+       shadowColor: '#777',
+       shadowOffset: {width: 1, height: 1},
+       shadowOpacity: 0.5,
+       shadowRadius: 2,
+     };
+     let popoverStyle = [].concat(black ? blackStyle : whiteStyle).concat(shadowStyle : null);
 
+
+     view.measureInWindow((x, y, width, height) => {
+       let fromBounds = {x, y, width, height};
+
+       let overlayView = (
+         <Overlay.PopoverView animated={true} popoverStyle={popoverStyle} fromBounds={fromBounds} direction={direction} align={align} directionInsets={4} showArrow={true}>
+           {customView}
+         </Overlay.PopoverView>
+       );
+       this.popoverView = Overlay.show(overlayView);
+     });
+  }
+  static hide(){
+    Overlay.hide(this.popoverView);
+  }
 }

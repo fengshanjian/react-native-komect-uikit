@@ -82,3 +82,5 @@ import { Button } from 'react-native-elements';
 -  [SegmentedBar 分段工具条](https://github.com/fengshanjian/react-native-elements/blob/master/docs/API/SegmentedBar.md)
 -  [SegmentedView 分段器](https://github.com/fengshanjian/react-native-elements/blob/master/docs/API/SegmentedView.md)
 -  [Toast 轻提示](https://github.com/fengshanjian/react-native-elements/blob/master/docs/API/Toast.md)
+-  [ParallaxView 下拉放大](https://github.com/fengshanjian/react-native-elements/blob/master/docs/API/ParallaxView.md)
+-  [Loader 加载动画](https://github.com/fengshanjian/react-native-elements/blob/master/docs/API/Loader.md)
