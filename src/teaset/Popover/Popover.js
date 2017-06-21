@@ -3,7 +3,7 @@
  * @Date:   2017-06-19T17:49:44+08:00
  * @Filename: Popover.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-21T17:30:36+08:00
+ * @Last modified time: 2017-06-21T17:36:09+08:00
  */
 
 
@@ -248,6 +248,10 @@ export default class Popover extends Component {
        this.popoverView = Overlay.show(overlayView);
      });
   }
+  /**
+   * 主动隐藏气泡
+   * @return {[type]} [description]
+   */
   static hide(){
     Overlay.hide(this.popoverView);
   }
