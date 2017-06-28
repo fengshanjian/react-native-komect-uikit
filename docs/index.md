@@ -64,7 +64,7 @@ import { Button } from 'react-native-elements';
 -  [Card 卡片](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/card.md)
 -  [Pricing 价格](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/pricing.md)
 -  [Grid 视图分块](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/grid.md)
--  [Slider 侧滑](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/slider.md)
+-  [Slider 滑块](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/slider.md)
 -  [Tile](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/tile.md)
 -  [Avatar 圆角图片](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/avatar.md)
 -  [Rating](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/rating.md)
