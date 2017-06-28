@@ -41,8 +41,10 @@ const customView = (
     <Text>
       哈哈哈
     </Text>
-    <TouchableOpacity onPress={()=>{
-      Popover.hide();
+    <TouchableOpacity 
+       ref="button"
+       onPress={()=>{
+        Popover.showPopover(this.refs.button,false,'down','center',customView)
     }}>
       <Text>
         heihei
@@ -53,7 +55,7 @@ const customView = (
     </Text>
   </View>);  
   
-  Popover.showPopover(this.refs.button,false,'down','center',customView)
+  
   
 ```
 
