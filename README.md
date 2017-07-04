@@ -67,7 +67,7 @@ import { Button } from 'react-native-elements';
 -  [Slider 滑块](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/slider.md)
 -  [Tile](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/tile.md)
 -  [Avatar 圆角图片](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/avatar.md)
--  [Rating](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/rating.md)
+-  [Rating 五星评价](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/rating.md)
 -  [SwipeDeck 这个自己看](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/swipedeck.md)
 -  [ActionPopover 操作气泡](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ActionPopover.md)
 -  [ActionSheet 操作选单](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ActionSheet.md)
