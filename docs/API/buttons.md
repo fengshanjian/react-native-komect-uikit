@@ -5,7 +5,7 @@ Buttons take a title and an optional [material icon name](https://design.google.
 ![Buttons](http://i.imgur.com/CVf1xbr.png)
 
 ```js
-import { Button } from 'react-native-elements'
+import { Button } from 'react-native-komect-uikit'
 
 <Button
   title='BUTTON' />
