@@ -151,7 +151,7 @@ const Button = props => {
 
   return (
     <View
-      style={[styles.container, raised && styles.raised, containerViewStyle]}
+      style={[image ? {} : styles.container, raised && styles.raised, containerViewStyle]}
     >
       <Component
         underlayColor={underlayColor || 'transparent'}
