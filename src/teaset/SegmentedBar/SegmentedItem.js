@@ -61,12 +61,12 @@ export default class SegmentedItem extends Component {
         textStyle = [{
           color: Theme.sbBtnActiveTitleColor,
           fontSize: Theme.sbBtnActiveTextFontSize,
-        }].concat(activeTitleStyle);
+        },{ paddingLeft: this.state.badgeRight, paddingRight: this.state.badgeRight }].concat(activeTitleStyle);
       } else {
         textStyle = [{
           color: Theme.sbBtnTitleColor,
           fontSize: Theme.sbBtnTextFontSize,
-        }].concat(titleStyle);
+        },{ paddingLeft: this.state.badgeRight, paddingRight: this.state.badgeRight }].concat(titleStyle);
       }
       title = <Text style={textStyle} numberOfLines={1}>{title}</Text>;
     }
@@ -75,7 +75,7 @@ export default class SegmentedItem extends Component {
     } else if (!React.isValidElement(badge) && badge) {
       let badgeStyle = {
         position: 'absolute',
-        right: this.state.badgeRight,
+        right: 0,
         top: this.state.badgeTop,
       };
       badge = (
@@ -84,7 +84,7 @@ export default class SegmentedItem extends Component {
           count={badge}
           onLayout={e => {
             let {width, height} = e.nativeEvent.layout;
-            let badgeRight = -width / 2;
+            let badgeRight = width / 2;
             let badgeTop = 0;
             if (badgeRight != this.state.badgeRight || badgeTop != this.state.badgeTop) {
               this.setState({badgeRight, badgeTop});
