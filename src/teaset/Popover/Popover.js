@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: Popover.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-21T17:36:09+08:00
+ * @Last modified time: 2017-08-12T14:15:01+08:00
  */
 
 
@@ -12,11 +12,11 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import {StyleSheet, View, Animated} from 'react-native';
 
 import Theme from '../themes/Theme';
-import Overlay from '../Overlay/Overlay'
 
 export default class Popover extends Component {
 

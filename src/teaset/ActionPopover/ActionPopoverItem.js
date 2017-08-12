@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: ActionPopoverItem.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T15:06:38+08:00
+ * @Last modified time: 2017-08-12T13:55:32+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
 import Theme from '../themes/Theme';
@@ -41,7 +42,7 @@ export default class ActionPopoverItem extends Component {
       borderRightWidth: rightSeparator ? Theme.apSeparatorWidth : 0,
     }].concat(style);
 
-    if ((title || title === 0) && !React.isValidElement(title)) {
+    if ((title || title === '' || title === 0) && !React.isValidElement(title)) {
       let textStyle = {
         backgroundColor: 'rgba(0, 0, 0, 0)',
         color: Theme.apItemTitleColor,

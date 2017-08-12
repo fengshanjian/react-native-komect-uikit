@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: Projector.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T15:01:05+08:00
+ * @Last modified time: 2017-08-12T14:15:45+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {StyleSheet, View} from 'react-native';
 
 import Theme from '../themes/Theme';

@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: ToastView.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T16:00:46+08:00
+ * @Last modified time: 2017-08-12T14:18:47+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import {View, Image, Text} from 'react-native';
 
 import Theme from '../themes/Theme';
@@ -75,12 +76,12 @@ export default class ToastView extends Overlay.View {
         let imageSource;
         if (typeof icon === 'string') {
           switch (icon) {
-            case 'success': imageSource = require('../icons/success.png'); break;
-            case 'fail': imageSource = require('../icons/fail.png'); break;
-            case 'smile': imageSource = require('../icons/smile.png'); break;
-            case 'sad': imageSource = require('../icons/sad.png'); break;
-            case 'info': imageSource = require('../icons/info.png'); break;
-            case 'stop': imageSource = require('../icons/stop.png'); break;
+            case 'success': imageSource = require('../../icons/success.png'); break;
+            case 'fail': imageSource = require('../../icons/fail.png'); break;
+            case 'smile': imageSource = require('../../icons/smile.png'); break;
+            case 'sad': imageSource = require('../../icons/sad.png'); break;
+            case 'info': imageSource = require('../../icons/info.png'); break;
+            case 'stop': imageSource = require('../../icons/stop.png'); break;
             default: imageSource = null; break;
           }
         } else {

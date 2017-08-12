@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: SegmentedBar.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T15:01:24+08:00
+ * @Last modified time: 2017-08-12T14:16:34+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {View, ScrollView, TouchableOpacity, Animated} from 'react-native';
 
 import Theme from '../themes/Theme';
@@ -48,19 +49,20 @@ export default class SegmentedBar extends Component {
   constructor(props) {
     super(props);
     this._activeIndex = this.props.activeIndex ? this.props.activeIndex : 0;
-    this._buttonsLayout = this.makeLayoutArray([], props.children);
-    this._itemsLayout = this.makeLayoutArray([], props.children);
+    this._buttonsLayout = this.makeArray([], props.children);
+    this._itemsLayout = this.makeArray([], props.children);
+    this._itemsAddWidth = this.makeArray([], props.children, 0);
     this._indicatorX = null;
     this._indicatorWidth = null;
     this._scrollViewWidth = 0;
   }
 
   componentWillReceiveProps(nextProps) {
-    let nextItemsLayout = this.makeLayoutArray(this._itemsLayout, nextProps.children);
+    let nextItemsLayout = this.makeArray(this._itemsLayout, nextProps.children);
     if (nextItemsLayout.length != this._itemsLayout.length) {
-      let nextButtonsLayout = this.makeLayoutArray(this._buttonsLayout, nextProps.children);
-      this._buttonsLayout = nextButtonsLayout;
+      this._buttonsLayout = this.makeArray(this._buttonsLayout, nextProps.children);
       this._itemsLayout = nextItemsLayout;
+      this._itemsAddWidth = this.makeArray(this._itemsAddWidth, nextProps.children, 0);
     }
     if (nextProps.activeIndex || nextProps.activeIndex === 0) {
       this._activeIndex = nextProps.activeIndex;
@@ -105,11 +107,11 @@ export default class SegmentedBar extends Component {
     return 0;
   }
 
-  makeLayoutArray(olders, items) {
+  makeArray(olders, items, empty = {x: 0, y:0, width: 0, height: 0}) {
     if (items instanceof Array) return items.map((item, index) => {
-      return index < olders.length ? olders[index] : {x: 0, y:0, width: 0, height: 0};
+      return index < olders.length ? olders[index] : empty;
     });
-    else if (items) return [olders.length > 0 ? olders[0] : {x: 0, y:0, width: 0, height: 0}];
+    else if (items) return [olders.length > 0 ? olders[0] : empty];
     return [];
   }
 
@@ -196,6 +198,12 @@ export default class SegmentedBar extends Component {
         this.onItemLayout(index, e);
         saveOnLayout && saveOnLayout(e);
       },
+      onAddWidth: width => {
+        if (width != this._itemsAddWidth[index]) {
+          this._itemsAddWidth[index] = width;
+          this.forceUpdate();
+        }
+      }
     });
     return newItem;
   }
@@ -235,7 +243,7 @@ export default class SegmentedBar extends Component {
         {children.map((item, index) => (
           <TouchableOpacity
             key={index}
-            style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}
+            style={{flex: 1, alignItems: 'center', justifyContent: 'center', paddingHorizontal: this._itemsAddWidth[index] / 2}}
             onPress={() => this.onButtonPress(index)}
             onLayout={e => this.onButtonLayout(index, e)}
           >
@@ -263,19 +271,22 @@ export default class SegmentedBar extends Component {
         horizontal={true}
         showsHorizontalScrollIndicator={false}
         scrollsToTop={false}
+        removeClippedSubviews={false}
         onLayout={e => this.onScrollViewLayout(e)}
         ref='scrollView'
         {...others}
       >
-        {children.map((item, index) => (
+        {children.map((item, index) => {
+          return (
           <TouchableOpacity
             key={index}
+            style={{paddingHorizontal: this._itemsAddWidth[index] / 2}}
             onPress={() => this.onButtonPress(index)}
             onLayout={e => this.onButtonLayout(index, e)}
           >
             {this.renderItem(item, index)}
           </TouchableOpacity>
-        ))}
+        )})}
         {this.renderIndicator()}
       </ScrollView>
     );

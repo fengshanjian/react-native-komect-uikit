@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: ListRow.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T16:03:25+08:00
+ * @Last modified time: 2017-08-12T14:09:42+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {StyleSheet, Text, View, Image} from 'react-native';
 
 import Theme from '../themes/Theme';
@@ -132,11 +133,11 @@ export default class ListRow extends Component {
           imageSource = null;
           break;
         case 'check':
-          imageSource = require('../icons/check.png');
+          imageSource = require('teaset/icons/check.png');
           tintColor = Theme.rowAccessoryCheckColor;
           break;
         case 'indicator':
-          imageSource = require('../icons/indicator.png');
+          imageSource = require('teaset/icons/indicator.png');
           tintColor = Theme.rowAccessoryIndicatorColor;
           break;
         default: imageSource = accessory;

@@ -1,4 +1,4 @@
-# `<Badge />` 徽章
+# `<BadgeTeaset />` 徽章
 Badge 组件定义一个徽章, 可用于图标角标显示数字、字母、原点等, 也可以自定义显示其它内容。
 
 ## Props
@@ -27,24 +27,24 @@ None.
 ## Example
 简单用法
 ```
-<Badge count={6} />
+<BadgeTeaset count={6} />
 ```
 
 圆角矩形
 ```
-<Badge type='square' count={68} />
+<BadgeTeaset type='square' count={68} />
 ```
 
 圆点
 ```
-<Badge type='dot' />
+<BadgeTeaset type='dot' />
 ```
 
 自定义
 ```
-<Badge style={{backgroundColor: '#777', paddingLeft: 0, paddingRight: 0}}>
+<BadgeTeaset style={{backgroundColor: '#777', paddingLeft: 0, paddingRight: 0}}>
   <Text style={{color: '#fff'}}>$</Text>
-</Badge>
+</BadgeTeaset>
 ```
 
 

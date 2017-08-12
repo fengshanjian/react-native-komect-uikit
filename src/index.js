@@ -3,7 +3,7 @@
  * @Date:   2017-06-20T09:43:15+08:00
  * @Filename: index.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-21T11:48:23+08:00
+ * @Last modified time: 2017-08-12T15:54:10+08:00
  */
 
 
@@ -40,45 +40,63 @@ import Rating from './rating/Rating';
 import SwipeDeck from './swipedeck/SwipeDeck';
 import Header from './header/Header';
 
+
 import ActionPopover from './teaset/ActionPopover/ActionPopover';
-import Theme from './teaset/themes/Theme';
-import Label from './teaset/Label/Label';
+import ActionSheet from './teaset/ActionSheet/ActionSheet';
 import BadgeTeaset from './teaset/Badge/Badge';
-import Popover from './teaset/Popover/Popover';
 import Carousel from './teaset/Carousel/Carousel';
+import KeyboardSpace from './teaset/KeyboardSpace/KeyboardSpace';
+import Label from './teaset/Label/Label';
+import ListRow from './teaset/ListRow/ListRow';
+import Menu from './teaset/Menu/Menu';
+import ModalIndicator from './teaset/ModalIndicator/ModalIndicator';
+import Overlay from './teaset/Overlay/Overlay';
+import Popover from './teaset/Popover/Popover';
+import PopoverPicker from './teaset/PopoverPicker/PopoverPicker';
 import Projector from './teaset/Projector/Projector';
+import PullPicker from './teaset/PullPicker/PullPicker';
 import SegmentedBar from './teaset/SegmentedBar/SegmentedBar';
 import SegmentedView from './teaset/SegmentedView/SegmentedView';
-import Overlay from './teaset/Overlay/Overlay';
+import Select from './teaset/Select/Select';
+import Stepper from './teaset/Stepper/Stepper';
 import Toast from './teaset/Toast/Toast';
-import ActionSheet from './teaset/ActionSheet/ActionSheet';
-import PullPicker from './teaset/PullPicker/PullPicker';
-import ListRow from './teaset/ListRow/ListRow';
+import Theme from './teaset/themes/Theme';
+
 
 import * as Progress from './Progress';
-
 import ParallaxView from './ParallaxView/ParallaxView';
-
 import * as Loader from './Loader';
+import Swiper from './Swiper/Swiper';
 
 const Elements = {
   Theme,
   ActionPopover,
-  Label,
-  Popover,
+  ActionSheet,
+  BadgeTeaset,
   Carousel,
+  KeyboardSpace
+  Label,
+  ListRow,
+  Menu,
+  ModalIndicator,
+  Overlay,
+  Popover,
+  PopoverPicker,
   Projector,
+  PullPicker,
   SegmentedBar,
   SegmentedView,
-  Overlay,
+  Select,
+  Stepper,
   Toast,
-  ActionSheet,
-  PullPicker,
-  ListRow,
+
+
+
 
   Progress,
   ParallaxView,
   Loader,
+  Swiper,
 
   Badge,
   Button,

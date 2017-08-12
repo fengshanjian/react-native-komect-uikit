@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: SegmentedItem.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T15:01:30+08:00
+ * @Last modified time: 2017-08-12T14:16:39+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {View, Text} from 'react-native';
 
 import Theme from '../themes/Theme';
@@ -27,6 +28,7 @@ export default class SegmentedItem extends Component {
     activeTitleStyle: Text.propTypes.style,
     active: PropTypes.bool,
     badge: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.number]),
+    onAddWidth: PropTypes.func, //(width)
   };
 
   static defaultProps = {
@@ -39,11 +41,13 @@ export default class SegmentedItem extends Component {
     this.state = {
       badgeRight: 0,
       badgeTop: 0,
+      badgeWidth: 0,
     };
   }
 
   buildProps() {
-    let {style, title, titleStyle, active, activeTitleStyle, badge, children, ...others} = this.props;
+    let {style, title, titleStyle, active, activeTitleStyle, badge, onAddWidth, children, ...others} = this.props;
+    let {badgeWidth} = this.state;
 
     style = [{
       paddingTop: Theme.sbBtnPaddingTop,
@@ -55,18 +59,18 @@ export default class SegmentedItem extends Component {
       justifyContent: 'center',
     }].concat(style);
 
-    if (!React.isValidElement(title) && (title || title === 0)) {
+    if (!React.isValidElement(title) && (title || title === '' || title === 0)) {
       let textStyle;
       if (active) {
         textStyle = [{
           color: Theme.sbBtnActiveTitleColor,
           fontSize: Theme.sbBtnActiveTextFontSize,
-        },{ paddingLeft: this.state.badgeRight, paddingRight: this.state.badgeRight }].concat(activeTitleStyle);
+        }].concat(activeTitleStyle);
       } else {
         textStyle = [{
           color: Theme.sbBtnTitleColor,
           fontSize: Theme.sbBtnTextFontSize,
-        },{ paddingLeft: this.state.badgeRight, paddingRight: this.state.badgeRight }].concat(titleStyle);
+        }].concat(titleStyle);
       }
       title = <Text style={textStyle} numberOfLines={1}>{title}</Text>;
     }
@@ -75,7 +79,7 @@ export default class SegmentedItem extends Component {
     } else if (!React.isValidElement(badge) && badge) {
       let badgeStyle = {
         position: 'absolute',
-        right: 0,
+        right: this.state.badgeRight,
         top: this.state.badgeTop,
       };
       badge = (
@@ -83,11 +87,12 @@ export default class SegmentedItem extends Component {
           style={badgeStyle}
           count={badge}
           onLayout={e => {
-            let {width, height} = e.nativeEvent.layout;
-            let badgeRight = width / 2;
+            let {width} = e.nativeEvent.layout;
+            let badgeRight = -width / 2;
             let badgeTop = 0;
-            if (badgeRight != this.state.badgeRight || badgeTop != this.state.badgeTop) {
-              this.setState({badgeRight, badgeTop});
+            if (badgeRight != this.state.badgeRight || badgeTop != this.state.badgeTop || badgeWidth != this.state.badgeWidth) {
+              this.setState({badgeRight, badgeTop, badgeWidth: width});
+              onAddWidth && onAddWidth(width);
             }
           }}/>
       );

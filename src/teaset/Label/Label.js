@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: Label.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T14:34:35+08:00
+ * @Last modified time: 2017-08-12T14:09:22+08:00
  */
 
 
@@ -12,7 +12,8 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
+import PropTypes from 'prop-types';
 import {Text} from 'react-native';
 
 import Theme from '../themes/Theme';
@@ -67,7 +68,7 @@ export default class Label extends Text {
       overflow: 'hidden',
     }].concat(style);
 
-    if (text || text === 0) children = text;
+    if (text || text === '' || text === 0) children = text;
 
     this.props = {type, size, style, text, children, ...others};
   }

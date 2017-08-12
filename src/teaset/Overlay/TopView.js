@@ -1,9 +1,9 @@
 /**
  * @Author: will
- * @Date:   2017-06-19T17:49:44+08:00
+ * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: TopView.js
  * @Last modified by:   will
- * @Last modified time: 2017-06-20T14:24:27+08:00
+ * @Last modified time: 2017-08-12T14:11:31+08:00
  */
 
 
@@ -12,7 +12,7 @@
 
 'use strict';
 
-import React, {Component, PropTypes} from "react";
+import React, {Component} from "react";
 import {StyleSheet, AppRegistry, DeviceEventEmitter, View, Animated} from 'react-native';
 //import {Symbol} from 'core-js';
 
@@ -201,15 +201,19 @@ var styles = StyleSheet.create({
 if (!AppRegistry.registerComponentOld) {
   AppRegistry.registerComponentOld = AppRegistry.registerComponent;
 }
-AppRegistry.registerComponent = function(appKey, getComponentFunc) {
-  let SourceComponent = getComponentFunc();
-  return AppRegistry.registerComponentOld(appKey, () => React.createClass({
-    render: function() {
+
+AppRegistry.registerComponent = function(appKey, componentProvider) {
+
+  class RootElement extends Component {
+    render() {
+      let Component = componentProvider();
       return (
         <TopView>
-          <SourceComponent {...this.props} />
+          <Component {...this.props} />
         </TopView>
       );
     }
-  }));
+  }
+
+  return AppRegistry.registerComponentOld(appKey, () => RootElement);
 }

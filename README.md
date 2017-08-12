@@ -1,27 +1,23 @@
-<p align="center">
-    <img alt="react-native-elements" src="https://raw.githubusercontent.com/react-native-training/react-native-elements/master/docs/images/react_native_elements_logo.png" width="450">
-  </a>
-</p>
 
-<h3 align="center">
+
+<h1 align="center">
   React Native Komect UIKit
-</h3>
+</h1>
 
-<p align="center">
-  Cross Platform <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
-</p>
+<h4 align="center">
+  跨平台 <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+</h4>
 
 
 <br />
 
-![React Native UI Toolkit](http://i.imgur.com/UXrGTeG.png)
 
-## Get Started
+## 开始
 
-### Installation
+### 安装
 
 
-- [参考这里](https://github.com/fengshanjian/react-native-elements/blob/master/default_installation.md).
+- [参考这里]
 
 
 ```js
@@ -31,12 +27,12 @@ npm i react-native-komect-uikit --save
 
 ```
 
-### Usage
+### 使用
 
 Start using the components:
 
 ```js
-import { Button } from 'react-native-elements';
+import { Button } from 'react-native-komect-uikit';
 
 <Button
   raised
@@ -47,7 +43,7 @@ import { Button } from 'react-native-elements';
 />
 ```
 
-## Components Included
+## Components 
 
 -  [Buttons 按钮](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/buttons.md)
 -  [Social Icons / Social Icon Buttons 社交图标](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/social_icons.md)
@@ -69,18 +65,37 @@ import { Button } from 'react-native-elements';
 -  [Avatar 圆角图片](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/avatar.md)
 -  [Rating 五星评价](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/rating.md)
 -  [SwipeDeck 这个自己看](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/swipedeck.md)
+
+
+以上组件fork自 <a href="https://github.com/react-native-training/react-native-elements/">react-native-elements</a> 如果文档不能帮助到你，可到原工程参考示例
+
+##Teaset Component
+
 -  [ActionPopover 操作气泡](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ActionPopover.md)
 -  [ActionSheet 操作选单](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ActionSheet.md)
+-  [BadgeTeaset 徽章](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Badge_teaset.md)
 -  [Carousel 图片轮播](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Carousel.md)
 -  [Label 文字](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Label.md)
 -  [ListRow 列表item](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ListRow.md)
+-  [Menu 操作菜单](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Menu.md)
+-  [ModalIndicator 模态指示器](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ModalIndicator.md)
 -  [Overlay 浮层](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Overlay.md)
 -  [Popover 气泡](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Popover.md)
--  [Progress 进度条刷新按钮等](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Progress.md)
+-  [PopoverPicker 气泡选择器](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/PopoverPicker.md)
 -  [Projector 幻灯片](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Projector.md)
 -  [PullPicker 上拉选择器](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/PullPicker.md)
 -  [SegmentedBar 分段工具条](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/SegmentedBar.md)
 -  [SegmentedView 分段器](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/SegmentedView.md)
+-  [Select 选择框](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Select.md)
+-  [Stepper 步进器](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Stepper.md)
 -  [Toast 轻提示](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Toast.md)
--  [ParallaxView 下拉放大](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ParallaxView.md)
--  [Loader 加载动画](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Loader.md)
+
+以上组件fork自 <a href="https://github.com/rilyu/teaset">teaset</a> 如果文档不能帮助到你，可到原工程参考示例
+
+
+## others Component
+-  [ParallaxView 下拉放大](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ParallaxView.md)    该组件fork自<a href="https://github.com/lelandrichardson/react-native-parallax-view">react-native-parallax-view</a>
+
+-  [Loader 加载动画](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Loader.md)    该组件fork自<a href="https://github.com/mohebifar/react-native-loader">react-native-loader</a>
+-  [Progress 进度条刷新按钮等](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Progress.md) 该组件fork自<a href="https://github.com/oblador/react-native-progress">react-native-progress </a>
+-  [Swiper 轮播图](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Swiper.md) 该组件fork自<a href="https://github.com/leecade/react-native-swiper">react-native-swiper </a>
