@@ -69,7 +69,7 @@ import { Button } from 'react-native-komect-uikit';
 
 以上组件fork自 <a href="https://github.com/react-native-training/react-native-elements/">react-native-elements</a> 如果文档不能帮助到你，可到原工程参考示例
 
-##Teaset Component
+## Teaset Component
 
 -  [ActionPopover 操作气泡](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ActionPopover.md)
 -  [ActionSheet 操作选单](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/ActionSheet.md)
