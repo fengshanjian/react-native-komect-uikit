@@ -21,11 +21,12 @@
 
 
 ```js
-
+#如果android的目录有更改，link操作不会起作用，建议参考react-native-vector-icons的手动link教程
 npm i react-native-vector-icons --save && react-native link react-native-vector-icons
 npm i react-native-komect-uikit --save
 
 ```
+
 
 ### 使用
 
