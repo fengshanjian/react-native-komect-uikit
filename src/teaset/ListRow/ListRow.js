@@ -3,7 +3,7 @@
  * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: ListRow.js
  * @Last modified by:   will
- * @Last modified time: 2017-08-12T14:09:42+08:00
+ * @Last modified time: 2017-08-12T17:10:18+08:00
  */
 
 
@@ -133,11 +133,11 @@ export default class ListRow extends Component {
           imageSource = null;
           break;
         case 'check':
-          imageSource = require('teaset/icons/check.png');
+          imageSource = require('../icons/check.png');
           tintColor = Theme.rowAccessoryCheckColor;
           break;
         case 'indicator':
-          imageSource = require('teaset/icons/indicator.png');
+          imageSource = require('../icons/indicator.png');
           tintColor = Theme.rowAccessoryIndicatorColor;
           break;
         default: imageSource = accessory;

@@ -3,7 +3,7 @@
  * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: Select.js
  * @Last modified by:   will
- * @Last modified time: 2017-08-12T14:19:35+08:00
+ * @Last modified time: 2017-08-12T17:11:08+08:00
  */
 
 
@@ -218,7 +218,7 @@ export default class Select extends Component {
       >
         {valueElement}
         <View style={{position: 'absolute', top: 0, bottom: 0, right: 0, justifyContent: 'center'}}>
-          <Image style={{width: iconSize, height: iconSize, tintColor: iconTintColor}} source={require('../../icons/select.png')} />
+          <Image style={{width: iconSize, height: iconSize, tintColor: iconTintColor}} source={require('../icons/select.png')} />
         </View>
       </ViewClass>
     );

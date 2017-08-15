@@ -3,7 +3,7 @@
  * @Date:   2017-08-09T23:33:32+08:00
  * @Filename: PopoverPickerItem.js
  * @Last modified by:   will
- * @Last modified time: 2017-08-12T14:21:13+08:00
+ * @Last modified time: 2017-08-12T17:10:35+08:00
  */
 
 
@@ -47,7 +47,7 @@ export default class PopoverPickerItem extends Component {
     };
     let accessory = (
       <View style={{paddingLeft: Theme.poppAccessoryPaddingLeft}}>
-        <Image style={imageStyle} source={selected ? require('teaset/icons/check.png') : null} />
+        <Image style={imageStyle} source={selected ? require('../icons/check.png') : null} />
       </View>
     );
     if (typeof title === 'string' || typeof title === 'number') {

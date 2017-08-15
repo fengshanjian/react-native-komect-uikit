@@ -3,7 +3,7 @@
  * @Date:   2017-06-20T09:43:15+08:00
  * @Filename: index.js
  * @Last modified by:   will
- * @Last modified time: 2017-08-12T15:54:10+08:00
+ * @Last modified time: 2017-08-12T17:08:23+08:00
  */
 
 
@@ -67,6 +67,7 @@ import * as Progress from './Progress';
 import ParallaxView from './ParallaxView/ParallaxView';
 import * as Loader from './Loader';
 import Swiper from './Swiper/Swiper';
+import Switch from './Switch/Switch';
 
 const Elements = {
   Theme,
@@ -74,7 +75,7 @@ const Elements = {
   ActionSheet,
   BadgeTeaset,
   Carousel,
-  KeyboardSpace
+  KeyboardSpace,
   Label,
   ListRow,
   Menu,
@@ -97,6 +98,7 @@ const Elements = {
   ParallaxView,
   Loader,
   Swiper,
+  Switch,
 
   Badge,
   Button,
