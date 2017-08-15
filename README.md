@@ -99,3 +99,4 @@ import { Button } from 'react-native-komect-uikit';
 -  [Loader 加载动画](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Loader.md)    该组件fork自<a href="https://github.com/mohebifar/react-native-loader">react-native-loader</a>
 -  [Progress 进度条刷新按钮等](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Progress.md) 该组件fork自<a href="https://github.com/oblador/react-native-progress">react-native-progress </a>
 -  [Swiper 轮播图](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Swiper.md) 该组件fork自<a href="https://github.com/leecade/react-native-swiper">react-native-swiper </a>
+-  [Switch 开关](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Switch.md) 该组件fork自<a href="https://github.com/poberwong/react-native-switch-pro">react-native-switch-pro </a>  但是添加了新的属性
