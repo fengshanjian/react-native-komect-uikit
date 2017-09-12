@@ -60,6 +60,8 @@ import SegmentedView from './teaset/SegmentedView/SegmentedView';
 import Select from './teaset/Select/Select';
 import Stepper from './teaset/Stepper/Stepper';
 import Toast from './teaset/Toast/Toast';
+import TabView from './teaset/TabView/TabView';
+import NavigationBar from './teaset/NavigationBar/NavigationBar';
 import Theme from './teaset/themes/Theme';
 
 
@@ -90,6 +92,7 @@ const Elements = {
   Select,
   Stepper,
   Toast,
+  TabView,
 
 
 
