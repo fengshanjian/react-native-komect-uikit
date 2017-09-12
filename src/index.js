@@ -3,7 +3,7 @@
  * @Date:   2017-06-20T09:43:15+08:00
  * @Filename: index.js
  * @Last modified by:   will
- * @Last modified time: 2017-08-12T17:08:23+08:00
+ * @Last modified time: 2017-09-12T12:39:34+08:00
  */
 
 
@@ -93,7 +93,7 @@ const Elements = {
   Stepper,
   Toast,
   TabView,
-
+  NavigationBar,
 
 
 

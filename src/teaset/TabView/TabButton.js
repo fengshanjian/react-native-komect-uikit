@@ -3,7 +3,7 @@
  * @Date:   2017-09-07T20:49:16+08:00
  * @Filename: TabButton.js
  * @Last modified by:   will
- * @Last modified time: 2017-09-11T16:36:53+08:00
+ * @Last modified time: 2017-09-12T12:38:09+08:00
  */
 
 
@@ -39,7 +39,7 @@ export default class TabButton extends Component {
   };
 
   buildProps() {
-    let {style, title, titleStyle, activeTitleStyle, icon, activeIcon, active, badge, iconContainerStyle, ...others} = this.props;
+    let {style, tintColor, title, titleStyle, activeTitleStyle, icon, activeIcon, active, badge, iconContainerStyle, ...others} = this.props;
 
     style = [{
       width: Theme.tvBarBtnWidth,
@@ -72,7 +72,6 @@ export default class TabButton extends Component {
       let iconStyle = {
         width: Theme.tvBarBtnIconSize,
         height: Theme.tvBarBtnIconSize,
-        tintColor: Theme.tvBarBtnIconTintColor,
       };
       icon = <Image style={iconStyle} source={icon} />
     }
@@ -81,7 +80,7 @@ export default class TabButton extends Component {
       let iconStyle = {
         width: Theme.tvBarBtnIconSize,
         height: Theme.tvBarBtnIconSize,
-        tintColor: Theme.tvBarBtnIconActiveTintColor,
+        tintColor,
       };
       activeIcon = <Image style={iconStyle} source={activeIcon} />
     }

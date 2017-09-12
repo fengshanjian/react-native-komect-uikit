@@ -3,7 +3,7 @@
  * @Date:   2017-09-07T20:49:16+08:00
  * @Filename: TabView.js
  * @Last modified by:   will
- * @Last modified time: 2017-09-11T16:37:36+08:00
+ * @Last modified time: 2017-09-12T12:26:32+08:00
  */
 
 
@@ -107,12 +107,16 @@ export default class TabView extends Component {
         <View style={barStyle} />
         <View style={buttonContainerStyle} pointerEvents='box-none'>
           {children.map((item, index) => {
-            let {type, title, icon, activeIcon, iconContainerStyle, badge, onPress} = item.props;
+            let {type, title, icon, activeIcon, titleStyle, activeTitleStyle,tintColor,
+              iconContainerStyle, badge, onPress} = item.props;
             let sheetIndex = sheetCount;
             if (type === 'sheet') sheetCount += 1;
             return (
               <this.constructor.Button
                 key={index}
+                titleStyle={titleStyle}
+                activeTitleStyle={activeTitleStyle}
+                tintColor={tintColor}
                 style={buttonStyle}
                 title={title}
                 icon={icon}
