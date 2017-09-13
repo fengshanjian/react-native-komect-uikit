@@ -1,3 +1,5 @@
+### TabView.Sheet添加部分自定义属性
+
 # `<TabView />` 标签页
 TabView 组件定义一个标签页组件, 用于在一个页面上显示多个子页面, 通过页面底部的 TabBar 切换子页面。
 
@@ -37,6 +39,9 @@ None.
 | icon | 同Image.source<br/>element |  | 按钮图标, 可以是 Image.source 或 React Native 组件。
 | activeIcon | 同Image.source<br/>element |  | 激活状态按钮图标, 可以是 Image.source 或 React Native 组件。
 | badge | string<br/>number<br/>element |  | 徽章, 可以是字符串、数字或 React Native 组件, 为字符串、数字时使用 `<Badge />`组件渲染。
+| titleStyle | 同Text.style |  | 未选中状态下的底部字体的样式，颜色等
+| activeTitleStyle | 同Text.style |  | 选中状态下的底部字体的样式，颜色等
+| tintColor | string（'#ffffff'）|  | 如果没有设置activeIcon，可以通过设置tintColor设置icon的选中色彩
 
 ## `<TabView.Sheet />` Events
 | Event Name | Returns | Notes |

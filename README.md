@@ -90,7 +90,8 @@ import { Button } from 'react-native-komect-uikit';
 -  [Select 选择框](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Select.md)
 -  [Stepper 步进器](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Stepper.md)
 -  [Toast 轻提示](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/Toast.md)
--  [TabView 标签页](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/TabView.md)
+-  [TabView 标签页](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/TabView.md)  TabView.Sheet添加部分自定义属性
+-  [NavigationBar 导航栏](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/NavigationBar.md)
 
 以上组件fork自 <a href="https://github.com/rilyu/teaset">teaset</a> 如果文档不能帮助到你，可到原工程参考示例
 
