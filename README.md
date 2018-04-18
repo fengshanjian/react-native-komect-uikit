@@ -12,38 +12,6 @@
 <br />
 
 
-## 开始
-
-### 安装
-
-
-- [参考这里]
-
-
-```js
-#如果android的目录有更改，link操作不会起作用，建议参考react-native-vector-icons的手动link教程
-npm i react-native-vector-icons --save && react-native link react-native-vector-icons
-npm i react-native-komect-uikit --save
-
-```
-
-
-### 使用
-
-Start using the components:
-
-```js
-import { Button } from 'react-native-komect-uikit';
-
-<Button
-  raised
-  icon={{name: 'home', size: 32}}
-  buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
-  textStyle={{textAlign: 'center'}}
-  title={`Welcome to\nReact Native Elements`}
-/>
-```
-
 ## Components 
 
 -  [Buttons 按钮](https://github.com/fengshanjian/react-native-komect-uikit/blob/master/docs/API/buttons.md)
