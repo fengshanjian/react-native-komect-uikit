@@ -6,6 +6,8 @@
 
 <h4 align="center">
   跨平台 <a href="https://facebook.github.io/react-native/">React Native</a> UI Toolkit
+  
+  暂停维护，大家可以通过 <a href="https://github.com/react-native-training/react-native-elements/">react-native-elements</a>与<a href="https://github.com/rilyu/teaset">teaset</a> 获得更多帮助，其他组件也可以参照具体原工程
 </h4>
 
 
